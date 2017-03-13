@@ -22,8 +22,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //状态栏、导航栏字体颜色
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    //导航栏背景颜色
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+//    //导航栏背景颜色
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     
     UIButton * button = [UIButton buttonWithType:UIButtonTypeSystem];
