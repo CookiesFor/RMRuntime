@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "UIButton+touch.h"
 #import "CreateLabel.h"
+#import "FirstViewController.h"
 @interface ViewController ()
 {
     NSInteger _clickNum;
@@ -49,8 +50,27 @@
 {
     _clickNum += 1;
     NSLog(@"点击了%ld下",(long)_clickNum);
+    
+    
+    
+    FirstViewController *firstVC = [[FirstViewController alloc]init];
+    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:firstVC];
+    
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
+    
 }
-
+//默认的值是黑色的
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
+    
+}
+// 是否隐藏状态栏
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
